@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(schoolwing.png);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.banner {
+    content: '';
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+}
+
+.banner2 {
+    content: '';
+    background-color: teal;
+    height: 99vh;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.banner3{
+
+    display: none;
+    content: attr(our-vision);
+    color: black;
+    background-color: white;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    padding: 2% 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.options {
+    flex: 1;
+    text-align: right;
+    cursor: pointer;
+}
+
+.options ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 12px 12px;
+    position: relative;
+}
+
+.options ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.options ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    background: navy;
+    margin: auto;
+    transition: 0.8s;
+}
+
+.options ul li:hover::after{
+    width: 100%;
+}
+
+.options .fa{
+    margin-left: 5px;
+}
+
+.submenu-1{
+    color: black;
+    display: none;
+    position: absolute;
+    width: 125px;
+    background: white;
+    opacity: 1;
+    text-align: left;
+    z-index: 2;
+    font-size: 10px;
+}
+
+.submenu-1 ul{
+    margin: 8px;
+}
+
+.submenu-1 ul li{
+    display: inline-block;
+    text-align: left;
+}
+
+.submenu-1 ul li a{
+    font-size: 10px;
+    color: black;
+}
+
+.submenu-1 ul li::after{
+    content: '';
+    display: block;
+    width: 0%;
+    background: none;
+    height: 2px;
+    position: relative;
+}
+
+submenu-1 ul li:hover::after{
+    width: 100%
+}
+
+.options ul li:hover .submenu-1{
+    display: block;
+}
+
+.submenu-1 ul li a:hover{
+    color: lightgray;
+}
+
+.salient-menu{
+    display: none;
+    position: absolute;
+    margin-top: -42px;
+    margin-left: 105px;
+    background-color: white;
+    opacity: 1;
+}
+
+.hover-me a{
+    white-space: nowrap;
+}
+
+.salient-menu ul li{
+    white-space: nowrap;
+}
+
+.salient-menu ul li:hover{
+    color: lightgray;
+}
+
+.hover-me .fa-angle-left{
+    display: none;
+    margin-left: -9px;
+    margin-right: 5px;
+}
+
+
+.submenu-1 ul li:hover .salient-menu{
+    display: block;
+}
+
+
+.school{
+    position: relative;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-weight: 1000;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 24px;
+    justify-content: space-between;
+}
+
+.school ul li{
+    list-style: none;
+    display: block;
+    transition: 0.3s;
+    padding-top: 5px;
+}
+
+.school ul li:hover{
+    scale: 1.6;
+}
+
+.school ul li:not(:hover){
+    transition-delay: 0.5s;
+}
+
+.school ul li:active{
+    color: aquamarine;
+    scale: 1;
+}
+
+.our-vision {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;  
+    position: absolute;
+    top: 215px;
+    left: 160px;
+    text-align: center;
+    z-index: 2;
+}
+
+#vision{
+    display: block;
+    padding-top: 10px;
+    width: 100%;
+}
+
+#vision-title{
+    display: inline-block;
+    transition: 0.7s;
+}
+
+#vision-title::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: navy;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    animation: vision both 2s;
+}
+  
+
+
+@keyframes vision {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%
+    }
+}
+  
+  #scrollMessage {
+    cursor: default;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+.menu .fa-solid{
+    display: none;
+}
+
+
+.options .fa-xmark {
+    display: none;
+}
+
+
+
+  /*---------------------------For mobile devices-----------------------------------*/
+
+
+
+@media(max-width: 700px){
+
+    .img {
+        width: 180px;
+        height: 50px;
+    }
+    .banner2{
+        display: none;
+    }
+    .banner3{
+        position: absolute;
+        left: 31px;
+    }
+    .banner{
+        height: 50px;
+    }
+    .school{
+        display: none;
+    }
+    #vision{
+        font-size: small;
+    }
+    .our-vision{
+        top: 220px;
+        left: 15%;
+        right: 15%;
+    }
+    .options ul li{
+        display: block;
+    }
+    
+    .options ul{
+        margin-top: 10px;
+    }
+
+    .options{
+        position: absolute;
+        background-color: white;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        left: -220px;
+        text-align: left;
+        z-index: 3;
+        transition: 1s;
+    }
+    .options ul li a{
+        color: black;
+    }
+
+    .vision-image {
+        display: none;
+    }
+
+    .menu .fa-solid{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }
+
+    .options .fa-xmark{
+        font-size: 25px;
+        display: block;
+    }
+
+
+    .options ul li::after {
+        background: white;
+    }
+
+    .welcome h1{
+        font-size: 20px;
+    }
+
+    .welcome-message {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .hover-me .fa-angle-right{
+        display: none;
+    }
+
+
+    .hover-me .fa-angle-left{
+        display: inline-block;
+        position: relative;
+    }
+
+    .salient-menu{
+        left: -215px;
+    }
+
+    .submenu-1 ul li a{
+        color: white;
+    }
+
+    
+}
+
+
+
+/*---------------NEW SECTION - WELCOME------------------------*/
+
+@keyframes welcome {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+.welcome{
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.welcome h1::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    background: turquoise;
+    margin-top: 5px;
+    animation: welcome 3s;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My School</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <section class="header">
+
+        <div class="banner"></div>
+        <div class="banner2"></div>
+        <div class="banner3"></div>
+        <div class="menu"><i class="fa-solid fa-bars" onclick="showMenu()"></i></div>
+        <nav>
+            <a href="index.html"><img src="TVSLOGO.png" class="img"></a>
+            <div class="options" id="options">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT<i class="fa fa-angle-down"></i></a>
+                        <div class="submenu-1">
+                            <ul>
+                                <li><a href="#">Principal's Desk</a></li>
+                                <li class="hover-me"><a href="#"><i class="fa-solid fa-angle-left"></i>Salient Features<i class="fa fa-angle-right"></i></a>
+                                    <div class="salient-menu">
+                                        <ul>
+                                            <li>Quality Circle</li>
+                                            <li>Number 2</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">INFRASTRUCTURE</a></li>
+                    <li><a href="#">CURRICULUM</a></li>
+                    <li><a href="#">ALUMNI</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="school">
+            <ul>
+                <li>T</li>
+                <li>H</li>
+                <li>E</li>
+                <li>&nbsp;</li>
+                <li>T</li>
+                <li>V</li>
+                <li>S</li>
+                <li>&nbsp;</li>
+                <li>S</li>
+                <li>C</li>
+                <li>H</li>
+                <li>O</li>
+                <li>O</li>
+                <li>L</li>
+            </ul>
+        </div>
+
+        <div class="our-vision">
+            <h1 id="vision-title">VISION</h1>
+            <p id="vision" class="typing-animation">
+                To build confident, competent and<br>
+                compassionate citizens through<br>
+                value based quality education<br>
+            </p>
+        </div>
+
+        <div id="scrollMessage">Scroll down for more</div>
+    </section>
+
+
+    <section class="welcome">
+        <h1 class="welcome-message">WELCOME TO THE TVS SCHOOL</h1>
+        <div class="line"></div>
+        <div class="lvs-logo"><img src="lvs-logo.jpg"></div>
+    </section>
+    
+
+    <!---------------JavaScript------------------------------------------------------------->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
